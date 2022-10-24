@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     height: 58px;
-    background-color: #FBC02D;
+    background-color: #2dfb9b;
     color: #263238;
     position: fixed;
     left: 0;
@@ -34,3 +34,5 @@
     width: 50px;
     height: 50px;
 }
+
+/* #FBC02D */
