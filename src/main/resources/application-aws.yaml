@@ -3,7 +3,7 @@ spring:
     activate:
       on-profile: aws
   datasource:
-    url: jdbc:mysql://13.57.19.64:3306/emprescar
+    url: jdbc:mysql://10.0.1.116:3306/emprescar
     username: root
     password:
     initialize: false
