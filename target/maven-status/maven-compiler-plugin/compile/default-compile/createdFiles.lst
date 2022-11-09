@@ -1,0 +1,9 @@
+br/com/dh/emprescar/model/Category.class
+br/com/dh/emprescar/service/CategoryService.class
+br/com/dh/emprescar/config/WebSecurityConfig.class
+br/com/dh/emprescar/controller/CategoryController.class
+br/com/dh/emprescar/repository/CategoryRepository.class
+br/com/dh/emprescar/service/exceptions/DatabaseException.class
+br/com/dh/emprescar/service/exceptions/EntityNotFoundException.class
+br/com/dh/emprescar/EmprescarApplication.class
+br/com/dh/emprescar/dto/CategoryDto.class

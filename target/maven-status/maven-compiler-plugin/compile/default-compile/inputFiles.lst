@@ -1,0 +1,9 @@
+/home/william/grupo_3/src/main/java/br/com/dh/emprescar/dto/CategoryDto.java
+/home/william/grupo_3/src/main/java/br/com/dh/emprescar/EmprescarApplication.java
+/home/william/grupo_3/src/main/java/br/com/dh/emprescar/model/Category.java
+/home/william/grupo_3/src/main/java/br/com/dh/emprescar/service/exceptions/EntityNotFoundException.java
+/home/william/grupo_3/src/main/java/br/com/dh/emprescar/controller/CategoryController.java
+/home/william/grupo_3/src/main/java/br/com/dh/emprescar/service/CategoryService.java
+/home/william/grupo_3/src/main/java/br/com/dh/emprescar/service/exceptions/DatabaseException.java
+/home/william/grupo_3/src/main/java/br/com/dh/emprescar/config/WebSecurityConfig.java
+/home/william/grupo_3/src/main/java/br/com/dh/emprescar/repository/CategoryRepository.java
