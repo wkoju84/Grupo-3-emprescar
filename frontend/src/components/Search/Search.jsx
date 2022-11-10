@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./Search.css";
 
 export default function Search() {
-  const [city, setCity] = useState([null, null]);
+  const [city, setCity] = useState(['', '']);
+
+  let requestConfigurationGet = {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: localStorage.getItem("token"),
+    },
+  };
+
+  useEffect(() => {
+    fetch("http://localhost:9000/cities", requestConfigurationGet)
+      .then((response) => response.json())
+      .then((citiesJSON) => setCity(citiesJSON));
+  }, []);
 
   function submitForm(event) {
     event.preventDefault();
@@ -13,35 +26,38 @@ export default function Search() {
 
   return (
     <>
-      <div className="form-search">
-        <form onSubmit={(event) => submitForm(event)} className="input-search">
-          <h1>Buscar por ofertas de carros para alugar</h1>
+        <div className="form-search">
+          <form
+            onSubmit={(event) => submitForm(event)}
+            className="input-search"
+          >
+            <h1>Buscar por ofertas de carros para alugar</h1>
 
-          <select className="input-city">
-            <option value="cities" disabled selected>
-              Onde quer retirar seu carro?
-            </option>
-            <option value="São Paulo">São Paulo</option>
-            <option value="Diadema">Diadema</option>
-            <option value="Lauro de Freitas">Lauro de Freitas</option>
-            <option value="Salvador">Salvador</option>
-          </select>
+            <select className="input-city">
+              <option value="cities" disabled selected>
+                Onde quer retirar seu carro?
+              </option>
+              
+              {city.map((city, index) => (  
+                <option value={city.name} key={index}>{city.name}</option>
+              ))}
+            </select>
 
-          <input
-            type="date"
-            className="input-date"
-            placeholder="Data de retirada"
-          />
+            <input
+              type="date"
+              className="input-date"
+              placeholder="Data de retirada"
+            />
 
-          <input
-            type="date"
-            className="input-date"
-            placeholder="Data de devolução"
-          />
+            <input
+              type="date"
+              className="input-date"
+              placeholder="Data de devolução"
+            />
 
-          <input className="button-search" type="submit" value="Buscar" />
-        </form>
-      </div>
+            <input className="button-search" type="submit" value="Buscar" />
+          </form>
+        </div>
     </>
   );
 }
